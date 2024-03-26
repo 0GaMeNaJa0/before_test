@@ -29,18 +29,19 @@ class crudController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)//ใช้สำหรับการเอาข้อมูลลงฐานข้อมูล //$request = ข้อมูลที่ผู้ใช้กรอก
-    {
-        $name = $request -> input("name");
-        $pin = $request -> input("pin");
+    {   
+        echo $request -> cars;
+        // $name = $request -> input("name");
+        // $pin = $request -> input("pin");
 
-        $titlesModel = new titlesModel();
+        // $titlesModel = new titlesModel();
 
-        $titlesModel -> tit_name = $name;
-        $titlesModel -> tit_pin = $pin;
+        // $titlesModel -> tit_name = $name;
+        // $titlesModel -> tit_pin = $pin;
 
-        $titlesModel->save();
+        // $titlesModel->save();
 
-        return Redirect::to("/customers"); 
+        // return Redirect::to("/customers"); 
     }
 
     /**
